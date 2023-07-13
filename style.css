@@ -1,0 +1,33 @@
+body {
+   
+    font-family: Times, "Times New Roman", Georgia, serif;
+    padding: 0;
+    margin: 0;
+    
+    
+  }
+
+  header {
+    background-color: #afabf4;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    font-size: larger;
+  }
+
+  footer {
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+    background-color: #d8983e;
+    color: #0d0a0a;
+  }
+
+  #my_canvas {
+    border: 3px solid #d32222;
+    margin: 20px auto;
+    display: block;
+  }
