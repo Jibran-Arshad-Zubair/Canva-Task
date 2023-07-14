@@ -29,17 +29,29 @@ input {
   border: 1px solid #ccc;
 }
 
-#generateBtn,
-#downloadBtn {
+#generateBtn
+ {
   background-color: #3478db;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 35%;
+    
+    margin-left: 95px;
 }
 
+#downloadBtn {
+  background-color: #e2941f;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 12%;
+    margin-left: 594px;
+}
 
 #my_canvas {
   border: 3px solid #d32222;
