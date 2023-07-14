@@ -1,41 +1,35 @@
+const canvas = document.getElementById('my_canvas');
+const context = canvas.getContext('2d');
 
-    
-    const canvas = document.getElementById('my_canvas');
-    const context = canvas.getContext('2d');
+function generateImage() {
+  const imageSrc = document.getElementById('imageSrc').value;
+  const imageText = document.getElementById('imageText').value;
+  const headerText = document.getElementById('headerText').value;
+  const footerText = document.getElementById('footerText').value;
 
-    
-    const imageSrc = prompt(' PLease Enter the url add of image :');
-    const imageText = prompt(' Please Enter text for the image:');
-    const header_text = prompt(' Please Enter the text for the header:');
-    const footer_text = prompt('Please Enter the text for the footer:');
+  const img = new Image();
+  img.onload = function() {
+    context.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing new image
+    context.drawImage(img, 4, 4, canvas.width, canvas.height);
 
-    
-    const headerTextElement = document.getElementById('header');
-    headerTextElement.innerText = header_text;
+    context.font = '3em Impact, fantasy';
+    context.fillStyle = 'green'; 
+    context.fillText(headerText, 150, 45);
+    context.fillText(imageText, 150, 170);
+    context.fillText(footerText, 140, 290);
+  };
+  img.src = imageSrc;
+}
 
-    const footerTextElement = document.getElementById('footer');
-    footerTextElement.innerText = footer_text;
+function downloadImage() {
+  const link = document.createElement('a');
+  link.href = canvas.toDataURL();
+  link.download = 'image.png';
+  link.click();
+}
 
-    
-    const img = new Image();
-    img.onload = function() {
-      context.drawImage(img, 4, 4, canvas.width, canvas.height);
+const generateButton = document.getElementById('generateBtn');
+generateButton.addEventListener('click', generateImage);
 
-       context.font = '3em Impact, fantasy ';
-context.fillStyle = 'green'; 
-      context.fillText(imageText, 50, 50);
-    };
-    img.src = imageSrc;
-
-  
-    function downloadImage() {
-      const link_1 = document.createElement('a');
-      link_1 .href = canvas.toDataURL();
-      
-      link_1 .download = 'image.png';
-      link_1 .click();
-    }
-
-    
-    const button = document.getElementById('Btn');
-    button.addEventListener('click', downloadImage);
+const downloadButton = document.getElementById('downloadBtn');
+downloadButton.addEventListener('click', downloadImage);

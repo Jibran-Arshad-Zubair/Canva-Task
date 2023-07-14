@@ -1,33 +1,48 @@
 body {
-   
-    font-family: Times, "Times New Roman", Georgia, serif;
-    padding: 0;
-    margin: 0;
-    
-    
-  }
+  font-family: Times, "Times New Roman", Georgia, serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f3f3f3;
+}
 
-  header {
-    background-color: #afabf4;
-    color: #000000;
-    padding: 10px;
-    text-align: center;
-    font-size: larger;
-  }
+.container {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #c0f4d4;
+  border-radius: 8px;
+}
 
-  footer {
-    position: fixed;
-    padding: 10px;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: larger;
-    background-color: #d8983e;
-    color: #0d0a0a;
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  #my_canvas {
-    border: 3px solid #d32222;
-    margin: 20px auto;
-    display: block;
-  }
+label {
+  font-weight: bold;
+}
+
+input {
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+#generateBtn,
+#downloadBtn {
+  background-color: #3478db;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+#my_canvas {
+  border: 3px solid #d32222;
+  margin: 20px auto;
+  display: block;
+}
