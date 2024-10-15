@@ -1,0 +1,60 @@
+body {
+  font-family: Times, "Times New Roman", Georgia, serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f3f3f3;
+}
+
+.container {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #c0f4d4;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+#generateBtn
+ {
+  background-color: #3478db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 35%;
+    
+    margin-left: 95px;
+}
+
+#downloadBtn {
+  background-color: #e2941f;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 12%;
+    margin-left: 594px;
+}
+
+#my_canvas {
+  border: 3px solid #d32222;
+  margin: 20px auto;
+  display: block;
+}
